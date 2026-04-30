@@ -3,22 +3,23 @@
 Fremont, CA · (408) 908-9659 · jwalinshah13@gmail.com
 github.com/jwalin-shah · linkedin.com/in/jwalin-shah · huggingface.co/jshah13
 
-**Privacy-first AI systems engineer building local/on-device tools that integrate with real workflows.**
+**Builds and ships open-source, local-first AI tools — and the evaluation infrastructure to know they actually work.**
 
-AI Systems Engineer · LLM Evaluation & Reliability · Tool-Augmented Reasoning · Local/On-Device AI
+AI Systems Engineer · LLM Evaluation & Reliability · Tool-Augmented Reasoning · Local/On-Device AI · Developer Tooling
 
 ## Selected Impact
 
 - **Evaluation at Scale** — Built telemetry across 3,600+ tasks; identified retrieval errors and tool selection (not model reasoning) as the dominant failure source in grounded LLM systems.
 - **LLM Reliability** — Demonstrated deterministic computation pipelines cut hallucination rates to <5% on real-world financial tasks.
 - **Competition Result** — Ranked 7th place (Team: Zero Node) on a 246-task financial reasoning benchmark at Sentient Arena Cohort 0.
+- **Open-Source Developer Tools** — Author of memjuice (Rust, Homebrew); core contributor to OpenHuman (39+ merged PRs across Rust core, RPC, memory, and notification systems).
 - **Real-World Systems** — Scaled robotics data operations to 30+ operators across five platforms; ~40% task success improvement, ~50% overhead reduction.
 
 ## Technical Skills
 
 - **AI Systems:** Tool-augmented LLMs, retrieval pipelines (BM25 + embeddings), structured extraction, deterministic computation, on-device inference (MLX, Apple Silicon)
 - **Eval & Reliability:** Benchmark harnesses, telemetry, failure mode analysis (tool thrashing, retrieval errors, temporal misalignment), hallucination measurement, RL environments
-- **Stack:** Python, SQL, Bash, FastAPI, SQLite + sqlite-vec, MLX, DSPy, TensorFlow, MediaPipe, Textual TUI
+- **Stack:** Python, Rust, SQL, Bash, FastAPI, SQLite + sqlite-vec, MLX, DSPy, TensorFlow, MediaPipe, Textual TUI
 
 ## Professional Experience
 
@@ -39,6 +40,21 @@ AI Systems Engineer · LLM Evaluation & Reliability · Tool-Augmented Reasoning 
 - Debugged edge-case failures in perception, manipulation, and locomotion systems in real-world deployment environments.
 
 ## Featured Projects
+
+### memjuice — Cross-Harness Transcript→Context Codec
+*[GitHub](https://github.com/jwalin-shah/memjuice) · Rust · Homebrew · Inspired by tokenjuice and rtk*
+
+- Single-binary tool that reads session JSONL from Claude Code, Codex, Cursor, Aider, Continue, and Gemini CLI; extracts six observation types via deterministic regex and structural rules — no LLM, no API key, offline, hand-editable plain-text ledger.
+- Sub-100ms `recall` over JSONL; supersession logic (Type A/B/C) keeps the ledger from going stale as decisions evolve across sessions.
+- Empirically grounded: cross-harness audit of 14,718 Claude + 69 Codex sessions on one machine before designing the extraction rules.
+- Same "deterministic > LLM in the hot path" philosophy as tokenjuice and rtk — install friction zero, cross-harness, predictable.
+
+### OpenHuman — Local-First Agentic Desktop Assistant
+*Core contributor · [tinyhumansai/openhuman](https://github.com/tinyhumansai/openhuman) · Rust core + TS desktop*
+
+- 39+ merged PRs across core systems: memory namespaces with recall citations, provider-surfaces RPC, daemon lifecycle + retry hardening, core→shell DomainEvent notification bridge.
+- Test infrastructure contributions: cross-process cron e2e, threads schema parse contract tests, RPC/registry edge-case coverage.
+- On-device knowledge base, locally-encrypted workflow data, native desktop integrations (STT/TTS, screen intelligence) — privacy posture aligned with Jarvis and inbox.
 
 ### Jarvis — Local-First AI Assistant
 *[GitHub](https://github.com/jwalin-shah/jarvis-ai-assistant) · 736 commits · DeveloperWeek 2026 Hackathon*
