@@ -22,6 +22,27 @@ Tabla con:
 
 ## Bloque B — Match con CV
 
+**Paso 0 — Portfolio Claims.** Antes de leer `cv.md`, consulta
+`~/projects/portfolio/career/positioning.md` para los proof points
+autoritativos del candidato. Cada proof point en portfolio tiene un
+commit SHA que lo respalda (HEAD actual: `e66525e`). Estos claims son
+la fuente de verdad — `cv.md` es una vista derivada.
+
+Para cada requisito del JD:
+1. Busca primero en los portfolio claims — ¿hay un proof point que
+   cubra directamente este requisito?
+2. Si sí, úsalo con su commit SHA como referencia. Ej:
+   `→ Bridge (github.com/jwalin-shah/bridge, commit e66525e): default-deny sandboxing, 6/9 findings fixed`
+3. Si no hay claim exacto, busca experiencia adyacente en portfolio
+4. Solo como último recurso, cae en `cv.md`
+
+**Formato de la tabla de match (extendido):**
+
+| Requisito JD | Match | Fuente | SHA |
+|-------------|-------|--------|-----|
+| Agent infrastructure experience | Bridge — spawn/verify/deliver pipeline | portfolio/career/positioning.md | `e66525e` |
+| ... | ... | ... | ... |
+
 Lee `cv.md`. Crea tabla con cada requisito del JD mapeado a líneas exactas del CV.
 
 **Adaptado al arquetipo:**
