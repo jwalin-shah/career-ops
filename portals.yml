@@ -96,10 +96,7 @@ title_filter:
     - "Applied Scientist"
     - "Research Engineer"
     - "Research Scientist"
-  negative:
-    # Only exclude what's genuinely impossible or irrelevant
-    - "COBOL"
-    - "Mainframe"
+  negative: []
   seniority_boost:
     # These prefixes add relevance but are not required
     - "Senior"
