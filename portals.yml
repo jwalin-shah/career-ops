@@ -97,25 +97,9 @@ title_filter:
     - "Research Engineer"
     - "Research Scientist"
   negative:
-    # Roles we genuinely can't or won't do
-    - ".NET"
-    - "Java "
-    - "iOS"
-    - "Android"
-    - "PHP"
-    - "Ruby"
-    - "Embedded"
-    - "Firmware"
-    - "FPGA"
-    - "ASIC"
-    - "Blockchain"
-    - "Web3"
-    - "Crypto"
-    - "Salesforce Admin"
-    - "SAP "
-    - "Oracle EBS"
-    - "Mainframe"
+    # Only exclude what's genuinely impossible or irrelevant
     - "COBOL"
+    - "Mainframe"
   seniority_boost:
     # These prefixes add relevance but are not required
     - "Senior"
